@@ -8,13 +8,15 @@
 body{
     background-image: url(../img/paven.png);
 }
-
-
-/*cabezera*/
+/*
+Buscando un error que tuve, lo puse para centrar el logo.no me valio en este caso.
 .img-responsive {
     max-width: 100%;
     height: auto;
-}
+}*/
+
+
+/*cabezera*/
 
 
 #header{
