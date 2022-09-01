@@ -3,7 +3,7 @@
     font-family: "nevis";
     src: url(../fonts/nevis.eot);
     /*?#iefix arregla si no carca en el internet exploer */
-    src:url(../fonts/nevis.eot?#iefix) format("embedded-opentype"),
+    src: url(../fonts/nevis.eot?#iefix) format("embedded-opentype"),
         url(../fonts/nevis.woff) format("woff"),
         url(../fonts/nevis.ttf) format("truetype"),
         url(../fonts/nevis.svg) format("svg");
@@ -100,3 +100,95 @@ Buscando un error que tuve, lo puse para centrar el logo.no me valio en este cas
 }
 
 /*En el heramientas de dessarollador con el Inspector se pueden apreciar todos los detalles de header y sus componentes que lleva dentro*/
+
+
+/*Barra de navegacion*/
+#nav {
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    /*para  que tenga una pequeña sombra */
+    box-shadow: 0px 0px 2px gray;
+}
+
+#nav ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1090px;
+}
+
+/*estilos de elementos de la lista*/
+#nav>ul>li {
+    /*para que se centre vertivalmente*/
+    line-height: 40px;
+    /*para que se pongan uno al lado del otro*/
+    float: left;
+    /*para separacion de cada elemento*/
+    border-right: 1px solid gray;
+    /*queda como una pequeña animación*/
+    transition: all 300ms;
+
+}
+
+#nav>ul>li a {
+    /*para poder modificar*/
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+
+}
+
+/*para poner al primer elemeneto de la lista una separacion*/
+#nav>ul>li a:first-child {
+    border-left: 1px solid gray
+}
+
+/*Efecto al menu paraque resalte el elemento del menu.*/
+#nav>ul>li:hover {
+    background-color: #70b231;
+    box-shadow: 0px 0px 4 px green inset;
+
+}
+
+/*Menu desplegable*/
+nav ul li ul {
+    /* para ocultar menu desplegable hasta que hacer over/HTML se va ocultar*/
+    display: none;
+    /* para que tenga una pocision absoluta/para que no desfigure la estructura de sitio web*/
+    position: absolute;
+
+    /* text-align: left;*/
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    /*para que este encima de los restos de los elementos*/
+    z-index: 1;
+}
+
+#nav ul li:hover ul {
+    /* muestra el menu desplegable*/
+    display: block;
+
+}
+
+#nav ul li:hover ul li {
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+
+}
+
+#nav ul li:hover ul li a {
+    color: #666666;
+}
+
+#nav ul li:hover ul li:hover {
+    box-shadow: 0px 0px 6px #ccc inset;
+}
