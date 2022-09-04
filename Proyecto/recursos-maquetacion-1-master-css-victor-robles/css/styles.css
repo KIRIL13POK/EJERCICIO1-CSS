@@ -10,7 +10,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family:FjallaOne-Regular ;
+    src: url(../fonts/FjallaOne-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 /*estilos generales*/
 * {
     padding: 0px;
@@ -42,6 +47,11 @@ a:visited {
 }
 .blue{
     color: #1377f2!important;
+
+
+}
+.orange{
+    color:#d69d2a!important;
 
 
 }
@@ -273,16 +283,16 @@ button::active {
 
 /*CONTENIDO*/
 #content {
-    width: 1250px;
+    width: 100%;
     /*altura minima/un escrol minimo*/
     min-height: 1100px;
     margin: 0px auto;
 }
 
 /*barra lateral*/
-#aside, #frase {
-    /*para que no se coloque al lado*/
-    clear: both;
+#aside{
+    /*para que no se coloque al lado clear: both;*/
+    
     width: 200px;
     float: left;
     margin: 10px;
@@ -292,15 +302,18 @@ button::active {
     font-family: Arial, Helvetica, sans-serif;
 }
 #frase{
-    clear: both;
+    float: left;
+    margin: 10px;
     display: block;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
     background: white;
     border: 1px #ccc;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     border-bottom: 1px dashed #333333;
+    box-shadow: 0px 2px 2px #ccc;
+    width: 180px;
 }
 
 #aside .widget {
@@ -372,10 +385,60 @@ button::active {
 
 /*Secciones*/
 #sections{
-    float: right;
+    float: right!important;
     width: 75%;
     font-family:Arial, Helvetica, sans-serif;
     margin-right:20px ;
 
 }
+ #sections .titulo{
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+    font-family:FjallaOne-Regular ;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: -20px;
+ }
 
+ /*Estilos de las cajas de contenido central*/
+
+ #sections section{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc ;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    /* todo lo que sobre salga de las secciones se oculta*/
+    overflow: hidden;
+ }
+#sections .article{
+    margin: 10px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+/*estilos al span */
+ #sections .date{
+    color: gray;
+    font-size: 14px;
+ }
+
+  /*colocar los stiker en su sitio*/
+  
+  #sections .stickerOne,
+  #sections .stickerTwo{
+    position: absolute;
+    margin-top: -38px;
+    /*para que tenga este nivel*/
+    z-index: 0;
+     
+  }
+  #sections .stickerTwo{
+    margin-left: 860px;
+}
+ 
